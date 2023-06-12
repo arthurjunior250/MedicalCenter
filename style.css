@@ -1,0 +1,1333 @@
+
+/* text-shadow: h-shadow v-shadow blur-radius color */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: sans-serif;
+  background: #EDEDED
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/*----------------- Desktop NavBar ----------------*/
+.navBar-Desktop {
+  height: 70px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index:40;
+  backdrop-filter: blur(250px);
+}
+
+.logo {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.navBar-Desktop .mainList {
+  position: relative;
+}
+
+.navBar-Desktop .mainList li {
+  display: inline-block;
+  margin: 0 0.5vw;
+  transition: 0.5s;
+}
+
+.navBar-Desktop .mainList li a {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Merienda', cursive;
+  padding-bottom: 4px;
+  transition: .1s ease-in-out;
+}
+
+
+.navBar-Desktop .mainList li a:hover {
+  border-bottom: 2px solid #ededed;
+  border-top: 2px solid #ededed;
+  transform: scale(1.3);
+  padding: 5px 0;
+}
+
+.subList {
+  position: absolute;
+  top: 80%;
+  left: 68%;
+  background: rgb(19,19,19,0.5);
+  border-radius: 6px;
+  width: 15%;
+  display: none;
+  z-index: 10;
+  margin-bottom: 10%;
+}
+
+.subList li {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.subList li a {
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1;
+  margin-left: 8px;
+  font-family: 'Merienda', cursive;
+}
+
+.subList li:hover {
+  background: rgb(251, 176, 35 , 0.5);
+}
+
+.show {
+  display: block;
+}
+
+/*------------ End Desktop Nav Bar ------------*/
+
+/*------------ Start Mobile Nav Bar ------------*/
+.navBar-mobile {
+  display: none;
+}
+
+.banner-mobile {
+  display:none;
+}
+
+/*------------ Start Header Section ------------*/
+.banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top:0;
+  right: 0;
+  left: 0;
+}
+
+.overlay {
+  position: absolute; 
+  width: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7); 
+  z-index: 1; /*smallest index in this part */
+}
+
+#nike {
+  width: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  text-align: center;
+  color: white;
+  z-index: 10; /*greatest index in this part */
+  line-height: 2;
+  font-weight: bold;
+}
+
+.mainhead {
+  text-transform: uppercase;
+  font-family: 'Merienda', cursive;
+  font-size: 30px;
+}
+
+.subhead {
+  font-family: 'Merienda', cursive;
+  text-transform: capitalize;
+  margin: 3% 0;
+}
+
+ .mainbtn  , button {
+  width: 150px;
+  height: 50px;
+  background: #EDEDED;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #0d2e44;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.7s ease-in-out;
+  border: none;
+  font-weight: 900;
+}
+
+.mainbtn::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  background: #326383;
+  left: -210px;
+  top: 0;
+  opacity: 1;
+  transition: 0.7s ease-in-out;
+  z-index: -1;
+}
+
+.mainbtn:hover::before {
+  left: 0%;
+}
+
+.mainbtn:hover{
+  color: white;
+  background: rgb(0,0,0,0.5);
+  transform: scale(1.1);
+}
+
+/*input[type="submit"] {
+  width:100px;
+  padding: 15px 2px;
+  color: #fff;
+  background-color: #153e5c;
+  font-family: 'Yrsa', serif;
+  text-align: center;
+  margin-left: 37%;
+}*/
+
+
+/*------------ End Header Section ------------*/
+
+
+/*----------------- Start About Section ------------*/
+
+.about {
+  display: flex;
+  transition: 0.3s ease-in-out;
+  background: #EDEDED;
+}
+
+.left-section {
+  background: #EDEDED;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:60%;
+}
+
+.left-section h1 {
+  text-align: center;
+  color: #40e0d0;
+  font-size: 50px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  width:40%;
+}
+
+.right-section .item {
+  display: flex;
+  margin: 10px 10px 10px 0;
+  width: 90%;
+}
+
+.item img {
+  margin: 0 20px;
+}
+
+.content h4 {
+  margin: 20px 0 0 0;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 24px;
+  color: #153e5c;
+}
+
+.content p {
+  margin: 5px 0 0 0;
+  line-height: 1.5;
+  font-size: 13px;
+  font-family: 'Yrsa', serif;
+  text-align: justify; 
+  color: #153e5c;
+}
+/*----------------- End About Section ------------*/
+
+/*------------ Start Box Feature Section -------------*/
+
+.continaer-features {
+  display: flex;
+  align-items: center;
+  width:100%;
+  justify-content: center;
+  flex-wrap: wrap;
+ }
+
+ .box-feature {
+  position: relative;
+  display: flex;
+  width: 250px;
+  height: 250px;
+  box-shadow: 5px 7px 20px rgb(0,0,0,0.5);
+  transition: 0.5s ease-in-out;
+  margin: 20px;
+  padding: 20px;
+ }
+
+ .box-feature:hover {
+   transform: translateY(22px);
+ }
+
+ .box-feature::before {
+   content:  " ";
+   display: block;
+   position: absolute;
+   top:0;
+   left: 0;
+   width: 100%;
+   height:100%;
+   background: linear-gradient(to bottom , rgb(166, 166, 166,0.5), rgb(237, 237, 237,0.4));
+   transition: 0.5s all;
+   z-index: 1;
+   opacity: 0;
+ }
+
+ .box-feature:hover::before {
+  opacity: 1;
+ }
+
+
+ .box-feature img {
+   width:100%;
+   height:100%;
+   object-fit: cover;
+   position: absolute;
+   top:0;
+   left: 0;
+   z-index: -1;
+   filter: grayscale(90%);
+   filter: brightness(80%);
+   filter: contrast(70%);
+ }
+
+ .box-feature .desc {
+   position: absolute;
+   z-index: 3;
+   color: white;
+   opacity: 0;
+   transform: translateY(30px);
+   transition: 0.5 all;
+   bottom:50px;
+   width:60%;
+   font-weight: bold;
+ }
+
+ .box-feature:hover .desc {
+   opacity: 1;
+   transform: translateY(0px);
+ }
+
+ .desc p {
+   letter-spacing: 2px;
+   font-size: 15px;
+   margin-top: 8px;
+   margin-bottom: 10px;
+ }
+
+ /*------------ End Box Feature Section -------------*/
+
+
+/*------------ Start About Trainers Section -------*/
+ .head2 , .bmihead , .contact-head {
+  text-align: center;
+  font-size: 40px;
+  color: #153e5c;
+  font-family: 'Bebas Neue', cursive;
+  margin: 7% 0;
+}
+
+.head2 .specail {
+  font-size: 50px;
+  color: #40e0d0;
+}
+
+.about-trainer {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+
+.about-trainer .card-trainer{
+  width: 300px;
+  background: #EDEDED;
+  margin: 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: 0 15px 25px rgb(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-trainer .card-trainer .name {
+  width:100%;
+  height: 100%;
+  clip-path: circle(70% at center 0);
+  text-align: center;
+  padding-bottom: 10px;
+
+}
+
+.name h3 {
+font-size: 27px;
+color: white;
+font-family: 'Bebas Neue', cursive;
+padding-bottom: 15px;
+}
+
+.name img {
+  border-radius: 50%;
+}
+
+.breif {
+  padding: 0px 15px 15px 15px;
+  text-align: center;
+}
+
+.breif  p {
+  color: #666666;
+  font-family: 'Yrsa', serif;
+}
+
+.breif  a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-size:14px;
+}
+
+.about-trainer .card-trainer:nth-child(1) .name , 
+.about-trainer .card-trainer:nth-child(1) .breif a
+{
+  background: #153e5c;
+}
+
+.about-trainer .card-trainer:nth-child(2) .name , 
+.about-trainer .card-trainer:nth-child(2) .breif a
+{
+  background: #40e0d0;
+}
+
+.about-trainer .card-trainer:nth-child(3) .name , 
+.about-trainer .card-trainer:nth-child(3) .breif a
+{
+  background: #87aeb4;
+}
+
+.about-trainer:hover .card-trainer {
+  filter: blur(1px);
+  transform: scale(0.9);
+  opacity: 0.4;
+}
+
+.about-trainer .card-trainer:hover {
+  filter: blur(0px);
+  transform: scale(1.1);
+  opacity: 1;
+}
+/*------------ End About Trainers Section -------*/
+
+/*------------ Start Classes Section -------*/
+
+.classes {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  justify-items:center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+  overflow-x: hidden;
+  }
+  
+  h1 {
+    margin: 10px;
+  }
+  
+  .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin:  20px;
+  height: 380px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 1s ease-in-out;
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: inset 0 0 0 50vw rgba(0,0,0,0.6);
+  }
+
+
+  .box:nth-of-type(even) {
+  transform: translateX(300%);
+  transition: transform 1.3s ease-in-out;
+  }
+  
+  .box:nth-of-type(odd) {
+  transform: translateX(-300%);
+  transition: transform 1.3s ease-in-out;
+  }
+
+  .box.show {
+  transform: translateX(0);
+  transition: transform 1.3s ease-in-out;
+  }
+  
+  .box h4  {
+  font-size: 30px;
+  color:white;
+  text-align: center;
+  }
+  .box p {
+    color:white;
+    text-align: center;
+    margin-top:7px;
+    font-size: 20px;
+
+  }
+
+  /*------------ End Classes Section -------------*/
+
+
+
+/*--------- Start Future Class -----------*/
+
+  .virtual {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .virtual h2 {
+    transition: 0.7s ease-in-out;
+    margin-bottom: 3%;
+  }
+
+  .virtual video {
+    margin-bottom: 5%;
+  }
+
+  @keyframes typing {
+    from { 
+      width: 0% ;
+    }
+    to {
+       width: 100%;
+   }
+  }
+  
+  
+/*---------- End Future Class -----------*/
+
+
+  /*------------ Start measurement-BMI Section -------------*/
+.measurement-BMI {
+  width:100%;
+  display: flex;
+  background: #131313;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+
+  .left-BMI {
+  display: flex;
+  flex-direction: column;
+  width:60%;
+  align-items: center;
+  margin-top: 10px;
+  z-index: 100;
+}
+
+#scale_main{
+  position: relative;
+  background-color: #779da3;
+  width: 280px;
+  min-height: 280px;
+  border-radius: 20px;
+  box-shadow:  0 0 20px rgb(0,0,0,0.5);
+  border: 12px solid #90B4BA;
+  margin-top:3%;
+  transition: .6s ease-in-out;
+  color: #153e5c;
+  font-family: 'Yrsa', serif;
+  font-size: 13px;
+}
+
+#scale_display{
+  border-radius: 140%;
+  width:40%;
+  height: 100px;
+  text-align:center;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  position: absolute;
+  top:5%;
+  left:25%;
+  transition: .6s ease-in-out;
+  background: white;
+  border: 10px solid #EDEDED ;
+  box-shadow:  inset 20px 20px 30px #DBDBDB ,  0px 0 5px white;
+  /*box-shadow: inset 0px 0px 30px rgb(0,0,0,0.1);*/
+}
+
+#scale_main:hover #scale_display {
+  transform: scale(.8);
+  transition: .6s ease-in-out;
+}
+
+#scale_main:hover{
+  transform: scale(.8);
+  transition: .6s ease-in-out;
+}
+
+#scale_main:hover #needle {
+  transform: skewX(25deg);
+  transition: .6s ease-in-out;
+}
+
+#needle{
+  background-color: #40e0d0;
+  width: 5px;
+  height: 40px;
+  box-shadow:  0px 0px 40px #131313;
+  position:absolute;
+  top:60%;
+  left: 48%;
+  transition: .6s ease-in-out;
+}
+
+#range {
+  margin: 10px;
+}
+
+.uerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%  ;
+  width:60%;
+}
+
+#weight-input , #height-input  {
+  width:150px;
+  height: 20px;
+  padding:7px ;
+  border: none;
+  background: #EDEDED;
+  color: #153e5c;
+  font-weight: bold;
+  margin: 3% 0 ;
+}
+
+label {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  color: #EDEDED;
+}
+button {
+  font-family: 'Bebas Neue', cursive;
+}
+
+#Calculate {
+  width:170px;
+  padding: 10px 20px;
+  margin: 2% 0 0 0;
+}
+
+.right-BMI {
+  display: flex;
+  flex-direction: column;
+  width:40%;
+  justify-content: center;
+  align-items: center;
+  color: #779da3;
+  line-height: 2;
+  font-weight: bold;
+  font-family: 'Yrsa', serif;
+  font-size: 20px;
+}
+
+.result-weight , .result-height {
+  color: white;
+  text-align: left;
+}
+
+.result {
+  text-align: center;
+}
+
+.result a {
+  color: white;
+}
+
+.about-BMI {
+  width:90%;
+  line-height: 1.5;
+  text-align: justify; 
+}
+
+
+/* CSS for Model Window */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+
+}
+.modal-content {
+  width: 66%;
+  position: relative;
+  margin: 2% 0 0 4%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+.close , .closeRegiter {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.6s ease-in-out;
+  position: absolute;
+  top:0;
+  right: 10px;
+}
+.close:hover, .close:focus , .closeRegiter:hover {
+  color: rgb(161, 1, 1);
+  cursor: pointer;
+}
+.closeRegiter {
+  color: gray;
+}
+
+ /*------------ End measurement-BMI Section ----------------*/
+
+ .container-footer {
+   display: flex;
+   width:100%;
+   justify-content: space-around;
+   margin: 5% 0 ;
+ }
+
+ .map-section {
+   width:50%;
+ }
+
+ .contcat-us {
+   display: flex;
+   flex-direction: column;
+   width:40%;
+ }
+
+ .contact-items {
+  display: block;
+  width: 90%;
+  font-family: sans-serif;
+  border: none;
+  border-bottom: 2px solid #153e5c;
+  padding: 15px 5px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  background: #EDEDED;
+  font-family: 'Yrsa', serif;
+  align-items: center;
+  resize: none;
+}
+
+input[type="submit"] {
+  width:100px;
+  padding: 15px 2px;
+  color: #fff;
+  background-color: #153e5c;
+  font-family: 'Yrsa', serif;
+  text-align: center;
+  margin-left: 37%;
+  cursor: pointer;
+}
+
+
+.contact-items::placeholder {
+  color: rgb(182, 179, 179);
+  margin-left: 5px;
+}
+
+textarea {
+  width:50%;
+  height:50%;
+}
+.error {
+  display: none;
+  color:red;
+  padding: 20px 0px;
+  font-family: 'Yrsa', serif;
+  text-align: center;
+}
+/*---Footer--*/
+
+.last-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background: #153e5c;
+  color: #EDEDED;
+  text-align: center;
+  font-family: 'Yrsa', serif;
+  height: 100%;
+  padding: 20px 0px;
+  font-size: 15px;
+}
+
+.last-section-location , .last-section-text , .social-media{
+  margin: 10px;
+  line-height: 2;
+}
+
+.icon-socail {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  line-height: 2;
+}
+.icon-socail a {
+  margin: 0 10px;
+}
+
+.fa-twitter-square {
+  color: #00aced;
+}
+.fa-snapchat-square {
+  color: rgb(255 ,252, 0)
+}
+
+.fa-instagram {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-color: white ;
+}
+
+ .fa-facebook-square {
+  color: #3b5998;
+}
+
+.fa-envelope-square {
+  color:lightgray;
+}
+
+footer {
+  background: #040e14;
+  width: 100%;
+  color:#EDEDED;
+  text-align: center;
+  font-family: 'Yrsa', serif;
+  font-size: 14px;
+  height: 30px;
+  padding-top:10px;
+}
+
+#top  {
+  position: fixed;
+  right:2%;
+  bottom:10%;
+  z-index: 1000;
+  display: none;
+}
+
+#topMobile {
+  display: none;
+}
+
+.popup {
+  position: absolute;
+  background: rgb(0,0,0,0.8);
+  width: 100%;
+  height:100%;
+  top:0;
+  left:0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  height:70%;
+  width:40%;
+  background: #ededed;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.userimg {
+  display: flex;
+  justify-content: center;
+  width:100%;
+  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+ .userimg .fa-user-alt {
+   margin-bottom: 10px;
+   color: #0d2e44;
+
+ }
+.userimg h3 {
+  color: #0d2e44;
+  font-family: sans-serif;
+}
+
+#uname , #uemail , #phoneNum , #pass , #checkpass , #registerr  {
+  width: 40%;
+  height: 14%;
+  margin: 10px;
+  padding: 7px;
+  top:0;
+  border:none;
+  outline:none;
+  border-bottom: 1px solid #3b3b3b;
+  background: #ededed;
+}
+.error1 {
+  color: red; 
+  font-size: 14px;
+  display:none;
+}
+
+
+.Register {
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  align-items: center;
+}
+
+#registerr{
+  background: #153e5c;
+}
+
+.regiterform1::placeholder {
+  margin-left: 2px;
+  font-size: 13px;
+  color:#153e5c;
+}
+
+#eye {
+  position: absolute;
+  top: 54%;
+  right:30%;
+  cursor: pointer;
+}
+
+#eye2 {
+  position: absolute;
+  top: 66%;
+  right:30%;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*------------------------------------- Media query For Mobile ------------------------------------------*/
+@media (max-width: 700px) {
+  .navBar-Desktop {
+    display: none;
+  }
+
+  .navBar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    height: 70px;
+    position: absolute;
+    z-index: 40;
+    width:100%;
+  }
+
+  .logo {
+    font-size: 15px;
+    margin-left: 3.5vw;
+    transition: 0.3s ease-in-out;
+  }
+
+  .icon-burger {
+    display: block;
+    cursor: pointer;
+    margin-right: 3.5vw;
+    position: relative;
+    z-index: 100;
+  }
+  .list {
+    margin-top: 30%;
+  }
+
+  .icon-burger .line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 1s;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+  }
+
+  .swip .line1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+    border-right-color: #1e0a57;
+    transition-delay: 0s;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+  }
+
+  .swip .line2 {
+    opacity: 0;
+    transition-delay: 0.128s;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+  }
+
+  .swip .line3 {
+    transform: rotate(45deg) translate(-4px, -4px);
+    border-right-color: #ddf1da;
+    transition-delay: 0.23s;
+    transition: all 0.3s ease-in-out;
+  }
+  .mainList-Mobile {
+    position: absolute;
+    right: 0;
+    top: 0%;
+    display: none;
+    height: 200vh;
+    width: 50%;
+    transition: 1s ease-in-out;
+    background: rgb(19,19,19,0.8);
+    z-index: 50;
+  }
+
+  .mainList-Mobile li {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  .mainList-Mobile li:hover {
+    background: #fbb023;
+  }
+
+  .mainList-Mobile li a {
+    margin: 5px 0px 0px 10px;
+    color: white;
+    font-weight: bold;
+    line-height: 1.5;
+    font-family: 'Merienda', cursive;
+    font-size: 13px;
+    transition: .5s;
+  }
+  
+  .mainList-Mobile li:hover {
+    background: rgb(251, 176, 35 , 0.5);
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .subList-Mobile {
+    display: none;
+  }
+
+  .subList-Mobile li a {
+    font-size: 12px;
+    color: rgb(251, 176, 35);
+  }
+  .subList-Mobile li:hover{
+    background: white;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .banner-mobile {
+    display: flex;
+    background: url("https://images.pexels.com/photos/3694704/pexels-photo-3694704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:60vw;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: inset 0 0 0 50vw rgba(0,0,0,0.6);
+    position: relative;
+    top:0;
+    right: 0;
+  }
+
+  .head2 , .bmihead , .contact-head {
+    font-size: 30px;
+  }
+
+  .caption {
+    text-align: center;
+    color: white;
+    line-height: 2;
+    padding: 10px 0;
+    font-size: 10px;
+  }
+  
+  .caption  {
+    padding-bottom: 10px;
+  }
+  .mainhead{
+    font-size: 15px;
+    border: none;
+  }
+
+  .mainbtn  , button {
+    width: 100px;
+    height: 27px;
+    margin-top: 10px;
+    font-size: 17px;
+  }
+  
+
+  .about {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .content h4 {
+    font-size: 18px;
+    color: #153e5c
+  }
+  
+  .content p {
+    font-size: 12px;
+  }
+
+  .left-section {
+    width:100%;
+  }
+  .left-section h1 { 
+    font-size: 30px;
+  }
+  .right-section {
+    width: 100%;
+  }
+
+  .right-section .item {
+    display: flex;
+    margin: 3px 3px 7px 0;
+  }
+
+  .about-trainer{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .classes {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    width:66%;
+    height: 40vh;
+  }
+
+  .measurement-BMI {
+    flex-direction: column;
+    background: #131313;
+    top:0;
+  }
+
+  .result {
+    text-align: center;
+  }
+
+  .left-BMI {
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #scale_main{
+    width: 170px;
+    min-height: 170px;
+    font-size: 10px;
+  }
+  
+
+  #scale_display{
+    width:100px;
+    height: 50px;
+    top:5%;
+    left:15%;
+  }
+
+  #needle{
+    width: 5px;
+    height: 20px;
+    top:70%;
+  }
+  
+  #range {
+    margin: 5px;
+  }
+
+  .uerInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 3% ;
+    width:100%;
+    align-items: center;
+  }
+  
+  #weight-input , #height-input  {
+    width:100px;
+    margin: 2%;
+    height: 20px;
+    padding: 5px ;
+  }
+  
+  #Calculate {
+    width:100px;
+    padding: 20px 4px;
+  }
+
+.right-BMI {
+    width:80%;
+    color: #153e5c;
+    background: #131313;
+    padding-bottom: 5%;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.container-footer , .last-section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-section {
+  width:70%;
+}
+
+.contcat-us {
+  width:70%;
+}
+
+input[type="submit"] {
+  padding: 15px 2px;
+  color: #fff;
+  background-color: #153e5c;
+  font-family: 'Yrsa', serif;
+  text-align: center;
+  margin-left: 33%;
+}
+  
+.modal-content {
+  overflow: scroll;
+  width:90%;
+  top:17px;
+  right:10px;
+}
+
+.close {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.6s ease-in-out;
+  position: absolute;
+  top:10px;
+  right: 20px;
+  z-index: 100;
+}
+.close:hover, .close:focus {
+  color: rgb(161, 1, 1);
+  cursor: pointer;
+}
+
+.virtual video {
+  width: 90%;
+}
+
+
+#topMobile  {
+  position: fixed;
+  right:2%;
+  bottom:10%;
+  z-index: 1000;
+  display: none;
+}
+
+#top {
+  display:none;
+}
+
+.popup-content {
+  height:50%;
+  width:80%;
+}
+
+.regiterform1::placeholder {
+  font-size: 10px;
+}
+
+}
