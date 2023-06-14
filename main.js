@@ -98,36 +98,36 @@ var triggerBottom = window.innerHeight;
 //console.log("height page "+triggerBottom);
 var images = [
   {
-    "src": "https://images.pexels.com/photos/3775589/pexels-photo-3775589.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "src": "doctor3.jpg",
     "text": "appointment",
     "time": "Monday 10:00 AM - 10:30 PM",
   },
   {
-    "src": "https://i.ibb.co/z7Kc6cb/yoga-Class.png",
+    "src": "doctor3.jpg",
     "text": "appointment",
     "time": "Sunday 12:30 PM to 1:00 PM",
 
   },
   {
-    "src": "https://i.ibb.co/f12v4k2/FIT-FOREVER-FITNESS-13.png",
+    "src": "doctor3.jpg",
     "text": "appointment",
     "time": "Tuesday 8:00 PM to 8:30 PM",
 
   },
   {
-    "src": "https://i.ibb.co/8BqBXVQ/FIT-FOREVER-FITNESS-14.png",
+    "src": "doctor3.jpg",
     "text": "appointment",
     "time": "Saturday 8:10 Pm to 8:30 PM",
 
   },
   {
-    "src": "https://i.ibb.co/r2LSDgD/FIT-FOREVER-FITNESS-16.png",
+    "src": "doctor3.jpg",
     "text": "appointment",
     "time": "Friday 2:32 PM Pm to 3:00",
 
   },
   {
-    "src": "https://i.ibb.co/0VzzPnc/FIT-FOREVER-FITNESS-18.png",
+    "src": "doctor3.jpg",
     "text": "appointment",
     "time": "Monday 9:00 AM to 9:30 AM"
   }
@@ -385,7 +385,7 @@ let triggerBottom2 = window.innerHeight;
 
   if (sectionTop <= triggerBottom2) {
     if (textMove.innerText === "") {
-      textMove.innerText = "Have you ever imagined youerself cycling in a fantsy world or futuirtic cities?";
+      textMove.innerText = " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ut quasi eos laborum totam reiciendis expedita id? Quod, repellendus tenetur!";
       textMove.style.animation = " typing 5s steps(200,end) forwards ";
 
     }
